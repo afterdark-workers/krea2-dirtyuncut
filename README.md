@@ -34,12 +34,19 @@ Just the model as its creator released it — no LoRAs, no extra nodes. All file
    | FlashBoot | On |
    | Container disk | 40 GB |
 
-   The first build takes about 15–25 minutes.
+   The first build takes about 30 minutes. The very first request after that waits another 10–15 minutes while a worker pulls the image; later cold starts are much faster.
 4. **Create an API key** — RunPod → Settings → API Keys → **Restricted**, allow only this endpoint.
 
 ## Updates
 
 Your copy only holds the token. The build steps (`build.sh`, `handler.py`) are downloaded from this repo on every build, so when something changes upstream (a model file is replaced, ComfyUI needs an update) it is fixed here — you just rebuild your endpoint.
+
+To rebuild: in your copy on GitHub, **Releases → Draft a new release** → any new tag (e.g. `v2`) → **Publish**. RunPod builds again on every new release (a plain commit does not trigger a build).
+
+### Model version
+
+`main` always follows the version the model's creator currently recommends. Now: **DirtyUncut, Civitai version 3372523**.
+When it moves to a new version, the old one is kept as a tag (e.g. `v3372523`). To stay on it, replace `main` with that tag in both `ADD` lines of your `Dockerfile`.
 
 ## Use it
 
