@@ -1,5 +1,6 @@
 {
-  "format": "comfy-pack/1",
+  "format": "pack/1",
+  "engine": "comfyui",
   "id": "krea2-dirtyuncut",
   "label": "Krea 2 DirtyUncut",
   "note": "10 steps, CFG 1, Euler (the creator's sample settings). No negative prompt. Write full sentences.",

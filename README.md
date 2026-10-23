@@ -50,7 +50,7 @@ When it moves to a new version, the old one is kept as a tag (e.g. `v3372523`). 
 
 ## Use it
 
-Any client that sends ComfyUI API-format workflows to RunPod works. `pack.json` in this repo holds the workflow and tells a client where the prompt, seed and size go (format `comfy-pack/1`).
+Any client that sends ComfyUI API-format workflows to RunPod works. `pack.json` in this repo holds the workflow and tells a client where the prompt, seed and size go (format `pack/1`, engine `comfyui`).
 
 Raw request:
 
