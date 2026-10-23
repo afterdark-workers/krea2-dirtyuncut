@@ -22,6 +22,7 @@ Just the model as its creator released it — no LoRAs, no extra nodes. All file
    (Your Civitai token will be in it, so it must stay private.)
 2. **Add your Civitai token** — get one at civitai.com → Account settings → API Keys.
    In your copy, open `Dockerfile` → ✏️ edit → replace `PASTE_YOUR_CIVITAI_TOKEN_HERE` on line 5 → Commit.
+   No RunPod account yet? [Sign up here](https://runpod.io?ref=qpguwapm) — a referral link: you get RunPod's sign-up bonus and this repo gets a small credit.
 3. **Create the endpoint** — RunPod → Serverless → New Endpoint → GitHub Repo → pick your copy:
 
    | Setting | Value |
@@ -66,4 +67,6 @@ Tips: 10 steps, CFG 1, Euler, no negative prompt. Write full sentences.
 
 ### Compatible clients
 
-- _(list coming)_
+- [Cobalt Pear](https://cobaltpear.github.io/) — a one-page web app: add this repo's URL, your endpoint ID and API key, then just type a prompt. Everything stays in your browser. [Try the demo](https://cobaltpear.github.io/demo/) without RunPod.
+
+Questions or ideas: [Discussions](https://github.com/cobaltpear/cobaltpear.github.io/discussions).
