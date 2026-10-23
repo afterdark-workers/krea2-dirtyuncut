@@ -18,6 +18,8 @@ Just the model as its creator released it — no LoRAs, no extra nodes. All file
 
 ## Setup (about 10 minutes + build time)
 
+New to this? Follow the [step-by-step setup guide](https://cobaltpear.github.io/guide.html).
+
 1. **Make your own private copy** — click **Use this template** → **Create a new repository** → choose **Private**.
    (Your Civitai token will be in it, so it must stay private.)
 2. **Add your Civitai token** — get one at civitai.com → Account settings → API Keys.
