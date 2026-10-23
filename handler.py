@@ -956,6 +956,7 @@ def handler(job):
     return final_result
 
 
-if __name__ == "__main__":
-    print("worker-comfyui - Starting handler...")
-    runpod.serverless.start({"handler": handler})
+# Called at the top level (not under `if __name__ == "__main__":`) — RunPod's GitHub check
+# looks for this line in handler.py and warns «handler not found» otherwise.
+print("worker-comfyui - Starting handler...")
+runpod.serverless.start({"handler": handler})
