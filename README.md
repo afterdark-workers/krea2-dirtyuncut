@@ -51,7 +51,7 @@ Leave everything else as it is, then **Deploy** at the bottom. The first build t
 
 Your copy only holds the token. The build steps (`build.sh`, `handler.py`) are downloaded from this repo on every build, so when something changes upstream (a model file is replaced, ComfyUI needs an update) it is fixed here — you just rebuild your endpoint.
 
-To rebuild: in your copy on GitHub, **Releases → Draft a new release** → any new tag (e.g. `v2`) → **Publish**. RunPod builds again on every new release (a plain commit does not trigger a build).
+To rebuild: commit any change to the `main` branch of your copy — RunPod builds again on every push to `main` (the endpoint's **Builds** tab shows it). Nothing to change? Edit `README.md` (✏️), add a line, **Commit changes…** → **Commit changes**.
 
 ### Model version
 
