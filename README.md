@@ -22,23 +22,30 @@ New to this? Follow the [step-by-step setup guide](https://cobaltpear.github.io/
 
 1. **Make your own private copy** — click **Use this template** → **Create a new repository** → choose **Private**.
    (Your Civitai token will be in it, so it must stay private.)
-2. **Add your Civitai token** — get one at civitai.com → Account settings → API Keys.
+2. **Add your Civitai token** — get one at civitai.com → Account settings → **Security & Apps** → **API Keys** → **Add API key** → Permission preset **Read Only**.
    In your copy, open `Dockerfile` → ✏️ edit → replace `PASTE_YOUR_CIVITAI_TOKEN_HERE` on line 5 → Commit.
    No RunPod account yet? [Sign up here](https://runpod.io?ref=qpguwapm) — a referral link: after you first add $10, RunPod gives you a bonus credit (usually $5–10) and this repo a small credit.
-3. **Create the endpoint** — RunPod → Serverless → New Endpoint → GitHub Repo → pick your copy:
-
-   | Setting | Value |
-   |---|---|
-   | Branch / Dockerfile path / Build context | `main` / `Dockerfile` / `.` |
-   | GPU | 24 GB or more |
-   | Active / Max workers | 0 / 1 |
-   | Idle timeout | 5 s |
-   | Execution timeout | 600 s |
-   | FlashBoot | On |
-   | Container disk | 40 GB |
-
-   The first build takes about 30 minutes. The very first request after that waits another 10–15 minutes while a worker pulls the image; later cold starts are much faster.
+3. **Create the endpoint** — see [Create the endpoint](#create-the-endpoint) below.
 4. **Create an API key** — RunPod → Settings → API Keys → **Restricted**, allow only this endpoint.
+
+## Create the endpoint
+
+RunPod → **Serverless** → **New Endpoint** → **Deploy from a GitHub repository** → pick your copy (the first time, **Edit connection** lets RunPod see it). Then, top to bottom on the page:
+
+| Where on the page | What to set |
+|---|---|
+| **Endpoint name** | anything — your copy's name is fine |
+| **GPU configuration** | tick a box of 24 GB or more (more boxes = easier to get a GPU) |
+| **Max workers** | `1` |
+| Click **Advanced settings** to open it: | |
+| → **Active workers** | `0` — nothing to pay while idle |
+| → **GPU count** | `1` |
+| → **Idle timeout** | `5` sec |
+| → **Enable FlashBoot** | on (the switch) · **Standard** |
+| → **Enable execution timeout** | on · **Execution timeout** `600` sec |
+| → click **Container configuration** to open it → **Container disk** | 40 GB |
+
+Leave everything else as it is, then **Deploy** at the bottom. The first build takes about 30 minutes. The very first request after that waits another 10–15 minutes while a worker pulls the image; later cold starts are much faster.
 
 ## Updates
 

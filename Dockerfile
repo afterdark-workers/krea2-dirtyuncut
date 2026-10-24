@@ -2,7 +2,7 @@
 # Build on RunPod from your own PRIVATE copy of this repo (Dockerfile path = Dockerfile, build context = .).
 # The build steps are downloaded from the original repo, so you never need to edit anything but the token.
 
-# >>> Put your Civitai API token here (civitai.com → Account settings → API Keys). Keep your repo PRIVATE. <<<
+# >>> Put your Civitai API token here (civitai.com → Account settings → Security & Apps → API Keys → Add API key → Read Only). Keep your repo PRIVATE. <<<
 ARG CIVITAI_TOKEN=PASTE_YOUR_CIVITAI_TOKEN_HERE
 
 FROM runpod/worker-comfyui:5.10.0-base
