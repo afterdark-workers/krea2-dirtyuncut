@@ -55,8 +55,8 @@ To rebuild: commit any change to the `main` branch of your copy — RunPod build
 
 ### Model version
 
-`main` always follows the version the model's creator currently recommends. Now: **DirtyUncut, Civitai version 3372523**.
-When it moves to a new version, the old one is kept as a tag (e.g. `v3372523`). To stay on it, replace `main` with that tag in both `ADD` lines of your `Dockerfile`.
+This repo always follows the version the model's creator currently recommends. Now: **DirtyUncut, Civitai version 3372523**.
+Each change of the build files is kept as a release (`files-…`). To stay on one, replace `latest/download` with `download/files-…` (that release's name) in both `ADD` lines of your `Dockerfile`.
 
 ## Use it
 
