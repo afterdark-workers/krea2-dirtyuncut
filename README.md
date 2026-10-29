@@ -1,5 +1,7 @@
 # Krea 2 DirtyUncut — RunPod Serverless worker
 
+> 🔞 **Adult (18+) · NSFW** — part of afterdark-workers, workers for uncensored adult image and video models.
+
 A ready-to-build [RunPod Serverless](https://runpod.io?ref=qpguwapm) worker for **[Krea2-SAT-DirtyRealism "DirtyUncut"](https://civitai.com/models/2796522?modelVersionId=3372523)**, a photorealistic Krea 2 Turbo fine-tune. Based on the official [`runpod/worker-comfyui`](https://github.com/runpod-workers/worker-comfyui).
 
 Models are baked into the image, so a cold start does not re-download anything.
